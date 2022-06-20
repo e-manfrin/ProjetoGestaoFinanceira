@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF14D4C0-364A-58AC-0A12-14E1A06B2FE0" name="Usuario_Perfil">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:17:27 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Perfis_IdPerfil" id="83BBAECA-2051-92B1-4813-B89E0F11C6CE">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:18:06 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F493C4B-671C-8D30-59F4-E44B402FC73A" referredColumn="8E02DB52-C33D-5D31-B5A6-408238C84AC8"/>
+</associations>
+</Column>
+<Column name="Usuarios_IdUsuario" id="0E24D1A2-D446-133F-06FE-BE53903CBAA4">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:23:01 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EAE92A92-0AAF-1AB0-604A-3CBEE8F053C0" referredColumn="F81889F6-71F1-39CD-38BD-0DC3E9438484"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2164B7E2-0776-53DD-33F5-EC695B663027" name="Usuario_Perfil_PK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:18:14 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83BBAECA-2051-92B1-4813-B89E0F11C6CE"/>
+<colUsage columnID="0E24D1A2-D446-133F-06FE-BE53903CBAA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC7EF087-6549-2CCE-6927-9487F8A47A2A" name="Usuario_Perfil_Perfis_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:18:06 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83BBAECA-2051-92B1-4813-B89E0F11C6CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BF582CD-2AB7-1E1F-70D7-4E93C95F49FB" name="Usuario_Perfil_Usuarios_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:23:01 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E24D1A2-D446-133F-06FE-BE53903CBAA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

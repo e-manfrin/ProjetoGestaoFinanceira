@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="28DF7C6A-DE0C-9B86-4EE9-04AB20A14D1C" name="Acoes">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:03:23 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IdAcao" id="B705BA0E-27BC-555F-20B5-2528A571CA1C">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:04:54 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AcaoDescricao" id="78347F6D-4C7E-A5D7-AFFB-8F56E4308CE4">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:05:41 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2BBBB49D-67AF-077E-79FF-379F3F6F4B97" name="Acoes_PK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:04:54 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B705BA0E-27BC-555F-20B5-2528A571CA1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

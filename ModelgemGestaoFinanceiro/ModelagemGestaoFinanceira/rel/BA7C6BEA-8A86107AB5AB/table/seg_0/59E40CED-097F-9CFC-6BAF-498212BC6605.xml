@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59E40CED-097F-9CFC-6BAF-498212BC6605" name="Perfis">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:06:59 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IdPerfil" id="8E02DB52-C33D-5D31-B5A6-408238C84AC8">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:07:30 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PerfilNome" id="EEA5D2C6-02E3-0223-2FD4-675C5E0CF4B9">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:07:48 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F95FA231-4200-77FB-D6DE-A171696E5292" name="Perfils_PK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 22:07:30 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E02DB52-C33D-5D31-B5A6-408238C84AC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
