@@ -1,4 +1,5 @@
 using GestaoFinanceira.Data;
+using GestaoFinanceira.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,6 +40,7 @@ namespace GestaoFinanceira
             });
             //services.AddScoped<IRepository, Repository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<ContaService, ContaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

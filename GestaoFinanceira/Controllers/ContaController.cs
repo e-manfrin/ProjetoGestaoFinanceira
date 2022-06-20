@@ -1,7 +1,9 @@
 using AutoMapper;
+using FluentResults;
 using GestaoFinanceira.Data;
 using GestaoFinanceira.Dtos;
 using GestaoFinanceira.Models;
+using GestaoFinanceira.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,71 +14,60 @@ namespace GestaoFinanceira.Controllers
     [Route("[controller]")]
     public class ContaController : ControllerBase
     {
-        private ContaContext _context;
-        private IMapper _mapper;
+        private ContaService _contaService;
 
-
-        public ContaController(ContaContext context, IMapper mapper)
+        public ContaController(ContaService contaService)
         {
-            _context = context;
-            _mapper = mapper;
+            _contaService = contaService;
         }
 
         [HttpPost]
         public IActionResult AdicionaConta([FromBody] CreateContaDto contaDto)
         {
-            Conta conta = _mapper.Map<Conta>(contaDto);
-            _context.Contas.Add(conta);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(RecuperaContaPorId), new { Id = conta.Id }, conta);
+            ReadContaDto readDto = _contaService.AdicionaConta(contaDto);
+            return CreatedAtAction(nameof(RecuperaContaPorId), new { Id = readDto.Id }, readDto);
         }
 
         [HttpGet]
-        public IEnumerable<Conta> RecuperarConta()
+        public IActionResult RecuperarConta([FromQuery] string nomeDaConta)
         {
-            return _context.Contas;
+            List<ReadContaDto> readDto = _contaService.RecuperarConta(nomeDaConta);
+            if (readDto == null) return NotFound();
+            return Ok(readDto);
         }
 
         [HttpGet("{id}")]
         public IActionResult RecuperarContaPorId(int id)
         {
-            var conta = _context.Contas.FirstOrDefault(conta => conta.Id == id);
-            if (conta != null)
-            {
-                return NotFound();
-            }
-
-            ReadContaDto contaDto = _mapper.Map<ReadContaDto>(conta);
-            return Ok(contaDto);
-
+            ReadContaDto readDto = _contaService.RecuperarContaPorId(id);
+            if (readDto == null) return NotFound();
+            return Ok(readDto);
         }
 
         [HttpPut("{id}")]
         public IActionResult RecuperaContaPorId(int id, [FromBody] UpdateContaDto contaDto)
         {
-            var conta = _context.Contas.FirstOrDefault(conta => conta.Id == id);
-            if (conta == null)
-            {
-                return NotFound();
-            }
-
-            _mapper.Map(contaDto, conta);
-            _context.SaveChanges();
+            Result resultado = _contaService.RecuperaContaPorId(id, contaDto);
+            if (resultado.IsFailed) return NotFound();
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeletaConta(int id)
         {
-            var conta = _context.Contas.FirstOrDefault(conta => conta.Id == id);
-            if (conta == null)
-            {
-                return NotFound();
-            }
-
-            _context.Remove(conta);
-            _context.SaveChanges();
+            Result resultado = _contaService.DeletaConta(id);
+            if (resultado.IsFailed) return NotFound();
             return NoContent();
+
+            //var conta = _context.Contas.FirstOrDefault(conta => conta.Id == id);
+            //if (conta == null)
+            //{
+                //return NotFound();
+            //}
+
+            //_context.Remove(conta);
+            //_context.SaveChanges();
+            //return NoContent();
         }
     }
 }
