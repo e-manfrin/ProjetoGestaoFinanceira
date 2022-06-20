@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ModelagemGestaoFinanceira" id="F1E1B5C0-8181-8BA7-BCD0-5A1E9EA63CA8" version="3.5">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-18 11:03:17 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F1E1B5C0-8181-8BA7-BCD0-5A1E9EA63CA8</designId>
+</OSDM_Design>

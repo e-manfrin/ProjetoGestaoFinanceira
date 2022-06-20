@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FF107B68-7783-FB7F-245C-DE2DD0104F6B" containerWithKeyObject="4FAF9463-CCC9-502E-6FF8-88F812ACBD84" localFKIndex="7B8BE716-23A4-9328-FC41-3E265531370A" name="DadosBancarios_TiposContas_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 14:27:38 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<referredTableLongName>TiposContas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>18A3A8A6-721A-427A-AD1E-05D9743D76A3</referredTableID>
+<keyObject>1FEC22F1-D6D7-6DD7-AEDA-EB4CBFD50106</keyObject>
+<referredKeyID>1FEC22F1-D6D7-6DD7-AEDA-EB4CBFD50106</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IdTipoConta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

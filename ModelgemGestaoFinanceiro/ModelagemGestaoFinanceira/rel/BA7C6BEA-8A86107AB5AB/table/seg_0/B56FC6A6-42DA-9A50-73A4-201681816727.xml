@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B56FC6A6-42DA-9A50-73A4-201681816727" name="TiposPessoas">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:19:43 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IdTiposPessoa" id="FDF5A3F0-D599-EFB5-B1CC-7BDB1468731A">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:20:20 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IdUsuario" id="99D4B317-F9E2-4876-ED38-46A16CAE4CC4">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:49:24 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85DFA9A7-9904-35B8-9461-19B65D65F4C2" referredColumn="F81889F6-71F1-39CD-38BD-0DC3E9438484"/>
+</associations>
+</Column>
+<Column name="Nome" id="CBEE3F46-DFD0-0B91-C13C-0C0ED97A1210">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:20:39 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataHoraCriacao" id="CE4FEF6E-4929-45B7-0D06-A9782AC393C9">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:20:55 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UsuarioCriacao" id="E49BEBEA-DCB2-6BC2-C5CD-0B60B7BBA862">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:21:29 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataHoraAlteracao" id="C926E6E0-C6ED-D0DD-0D37-C6A576CA224C">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:21:47 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UsuarioAlteracao" id="CA68F135-A813-18D3-D776-40BFB14C2A1B">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:22:09 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="44C8B7FF-08BB-A3DF-E809-232A4B2F8079" name="TiposPessoas_PK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:20:20 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FDF5A3F0-D599-EFB5-B1CC-7BDB1468731A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50A4F5FB-9A27-B7B9-2DBB-C732033D23C7" name="TiposPessoas_Usuarios_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:49:24 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99D4B317-F9E2-4876-ED38-46A16CAE4CC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

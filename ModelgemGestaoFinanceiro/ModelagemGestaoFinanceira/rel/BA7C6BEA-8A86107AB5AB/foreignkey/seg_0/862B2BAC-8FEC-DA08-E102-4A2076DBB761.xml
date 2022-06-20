@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="862B2BAC-8FEC-DA08-E102-4A2076DBB761" containerWithKeyObject="7B77E869-53D6-3655-1106-89FF8CEBF6C4" localFKIndex="5731964C-3537-81E1-07CE-96247FD1FDD1" name="ControlesFinanceiros_CategoriasContas_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 14:16:55 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<referredTableLongName>CategoriasContas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>49C85632-8E8F-856D-35C4-3CE44128477E</referredTableID>
+<keyObject>A2E2AF31-9F6C-F8C8-8F02-54D4BA9658B8</keyObject>
+<referredKeyID>A2E2AF31-9F6C-F8C8-8F02-54D4BA9658B8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IdCategoriaConta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BBCF2D4D-8E85-2714-4AA3-C2F19FC3F27F" containerWithKeyObject="395328D5-7276-ABFF-589C-0B51075BC3E6" localFKIndex="0C3058D1-4D52-BBE9-2D2B-C2EEDA45671A" name="Clientes_TiposPessoas_FK">
+<createdBy>drman</createdBy>
+<createdTime>2022-06-20 13:23:18 UTC</createdTime>
+<ownerDesignName>ModelagemGestaoFinanceira</ownerDesignName>
+<referredTableLongName>TiposPessoas</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B56FC6A6-42DA-9A50-73A4-201681816727</referredTableID>
+<keyObject>44C8B7FF-08BB-A3DF-E809-232A4B2F8079</keyObject>
+<referredKeyID>44C8B7FF-08BB-A3DF-E809-232A4B2F8079</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IdTiposPessoa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
