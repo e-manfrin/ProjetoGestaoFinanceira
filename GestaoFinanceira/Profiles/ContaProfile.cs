@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using GestaoFinanceira.Dtos;
+using GestaoFinanceira.Data.Dtos.Conta;
 using GestaoFinanceira.Models;
 
 namespace GestaoFinanceira.Profiles

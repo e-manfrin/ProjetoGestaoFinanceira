@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GestaoFinanceira.Migrations
 {
-    [DbContext(typeof(ContaContext))]
-    [Migration("20220610154030_v1")]
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20220621145218_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,24 +44,62 @@ namespace GestaoFinanceira.Migrations
                         new
                         {
                             Id = 1,
-                            DataHora = new DateTime(2022, 6, 10, 12, 40, 30, 268, DateTimeKind.Local).AddTicks(6692),
+                            DataHora = new DateTime(2022, 6, 21, 11, 52, 18, 414, DateTimeKind.Local).AddTicks(7760),
                             Descricao = "Pago",
                             Valor = 100.0
                         },
                         new
                         {
                             Id = 2,
-                            DataHora = new DateTime(2022, 6, 10, 12, 40, 30, 268, DateTimeKind.Local).AddTicks(6709),
+                            DataHora = new DateTime(2022, 6, 21, 11, 52, 18, 414, DateTimeKind.Local).AddTicks(7781),
                             Descricao = "Pago",
                             Valor = 700.0
                         },
                         new
                         {
                             Id = 3,
-                            DataHora = new DateTime(2022, 6, 10, 12, 40, 30, 268, DateTimeKind.Local).AddTicks(6710),
+                            DataHora = new DateTime(2022, 6, 21, 11, 52, 18, 414, DateTimeKind.Local).AddTicks(7783),
                             Descricao = "Pago",
                             Valor = 50.0
                         });
+                });
+
+            modelBuilder.Entity("GestaoFinanceira.Models.Usuario", b =>
+                {
+                    b.Property<int>("IdUsuario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataHoraAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataHoraCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmailLogin")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UsuarioAlteracao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UsuarioCriacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdUsuario");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

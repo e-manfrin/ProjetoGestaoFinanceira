@@ -1,8 +1,7 @@
 using AutoMapper;
 using FluentResults;
-using GestaoFinanceira.Data;
-using GestaoFinanceira.Dtos;
 using GestaoFinanceira.Models;
+using GestaoFinanceira.Data.Dtos.Conta;
 using GestaoFinanceira.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -58,16 +57,6 @@ namespace GestaoFinanceira.Controllers
             Result resultado = _contaService.DeletaConta(id);
             if (resultado.IsFailed) return NotFound();
             return NoContent();
-
-            //var conta = _context.Contas.FirstOrDefault(conta => conta.Id == id);
-            //if (conta == null)
-            //{
-                //return NotFound();
-            //}
-
-            //_context.Remove(conta);
-            //_context.SaveChanges();
-            //return NoContent();
         }
     }
 }

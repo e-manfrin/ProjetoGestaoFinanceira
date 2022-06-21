@@ -1,18 +1,18 @@
 ﻿using AutoMapper;
 using FluentResults;
 using GestaoFinanceira.Data;
-using GestaoFinanceira.Dtos;
+using GestaoFinanceira.Data.Dtos.Conta;
 using GestaoFinanceira.Models;
 
 namespace GestaoFinanceira.Services
 {
     public class ContaService
     {
-        private ContaContext _context;
+        private AppDbContext _context;
         private IMapper _mapper;
 
 
-        public ContaService(ContaContext context, IMapper mapper)
+        public ContaService(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -54,10 +54,6 @@ namespace GestaoFinanceira.Services
                 return _mapper.Map<ReadContaDto>(conta);
             }
             return null;
-
-            //_mapper.Map(contaDto, conta);
-            //_context.SaveChanges();
-            //return Result.Ok();
         }
 
         public Result RecuperaContaPorId(int id, UpdateContaDto contaDto)

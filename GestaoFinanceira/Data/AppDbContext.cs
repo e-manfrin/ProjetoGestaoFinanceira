@@ -3,13 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GestaoFinanceira.Data
 {
-    public class ContaContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public ContaContext(DbContextOptions<ContaContext> opt) : base(opt)
+        public AppDbContext(DbContextOptions<AppDbContext> opt) : base(opt)
         {
 
         }
         public DbSet<Conta> Contas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

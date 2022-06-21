@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GestaoFinanceira.Dtos
+namespace GestaoFinanceira.Data.Dtos.Conta
 {
     public class UpdateContaDto
     {

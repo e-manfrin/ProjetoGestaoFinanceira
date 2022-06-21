@@ -29,7 +29,7 @@ namespace GestaoFinanceira
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ContaContext>(
+            services.AddDbContext<AppDbContext>(
                 opts => opts.UseSqlite(Configuration.GetConnectionString("Default"))
                 );
 
@@ -41,6 +41,7 @@ namespace GestaoFinanceira
             //services.AddScoped<IRepository, Repository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<ContaService, ContaService>();
+            services.AddScoped<UsuarioService, UsuarioService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
